@@ -1,8 +1,10 @@
 html {
 	font-family: Futura, sans-serif;
+	background: #888;
 }
 
-.v {
-	background: #000;
+.box {
+	background: #444;
 	color: #fff;
+	padding: 20px 30px;
 }
