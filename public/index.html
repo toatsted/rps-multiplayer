@@ -25,16 +25,16 @@
 	<button id="killSwitch">kill switch</button>
 	<div class="container">
 		<header class="row">
-			<h1 id="title">Supreme</h1>
+			<h1 id="title">Queue</h1>
 		</header>
 		<div class="row">
 			<div class="col-6">
 				<div class="box" id="player">
 					<h2>player</h2>
 					<div class="area">
-						<form>
+						<form id="name-form">
 							<label for="input">nickname: </label>
-							<input type="text" id="name-input">
+							<input autocomplete="off" type="text" id="name-input">
 							<button type="submit">start queue</button>
 						</form>
 					</div>
@@ -44,6 +44,21 @@
 				<div class="box" id="opponent">
 						<h2>opponent</h2>
 					<div class="area">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<div class="box temp" id="message-box">
+					<h2>message</h2>
+					<div class="area">
+						<form id="message-form">
+							<input autocomplete="off" type="text" id="message-input">
+							<button id="submit-button" type="submit">send</button>
+						</form>
+						<div id="messages">
+						</div>
 					</div>
 				</div>
 			</div>
