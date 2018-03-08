@@ -1,8 +1,26 @@
-html {
-	font-family: Futura, sans-serif;
+body {
+	font-family: monospace;
 }
 
-.v {
-	background: #000;
-	color: #fff;
+.box {
+	background: #eee;
+	color: #333;
+	height: 400px;
+	padding: 10px;
+}
+
+.box h2 {
+	border-bottom: 1px dashed #333;
+	padding-bottom: 2px;
+}
+
+#title{
+	display: inline-block;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 60px;
+	color: #FFFFFFFF;
+	background-color: #E42520FF;
+	padding: 10px 15px;
+	margin:20px auto;
 }
