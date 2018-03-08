@@ -1,0 +1,33 @@
+[debug] [2018-03-08T08:24:05.232Z] ----------------------------------------------------------------------
+[debug] [2018-03-08T08:24:05.239Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sam\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-03-08T08:24:05.240Z] CLI Version:   3.17.5
+[debug] [2018-03-08T08:24:05.240Z] Platform:      win32
+[debug] [2018-03-08T08:24:05.240Z] Node Version:  v8.9.3
+[debug] [2018-03-08T08:24:05.242Z] Time:          Thu Mar 08 2018 02:24:05 GMT-0600 (Central Standard Time)
+[debug] [2018-03-08T08:24:05.242Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-08T08:24:05.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-08T08:24:05.289Z] > authorizing via signed-in user
+[debug] [2018-03-08T08:24:05.296Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/rps-multiplayer-14455  
+  
+ Thu Mar 08 2018 02:24:05 GMT-0600 (Central Standard Time)
+[debug] [2018-03-08T08:24:05.867Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-08T08:24:05.870Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/rps-multiplayer-14455/tokens  
+  
+ Thu Mar 08 2018 02:24:05 GMT-0600 (Central Standard Time)
+[debug] [2018-03-08T08:24:06.273Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-08T08:24:06.276Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/rps-multiplayer-14455  
+  
+ Thu Mar 08 2018 02:24:06 GMT-0600 (Central Standard Time)
+[debug] [2018-03-08T08:24:06.722Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Sam\code\github-repositories\rps-multiplayer'...
+[info] 
+[debug] [2018-03-08T08:24:06.732Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/862761191650/clients/_:getWebAppConfig  
+  
+ Thu Mar 08 2018 02:24:06 GMT-0600 (Central Standard Time)
+[debug] [2018-03-08T08:24:07.495Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
