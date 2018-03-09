@@ -1,10 +1,67 @@
-html {
-	font-family: Futura, sans-serif;
-	background: #888;
+body {
+	font-family: monospace;
+}
+
+.temp {
+	display: none;
+}
+
+#messages p {
+	margin: 0 5px;
+}
+
+.redText {
+	color: #E4250FFF;
+}
+
+.area {
+	margin: 5px;
 }
 
 .box {
-	background: #444;
-	color: #fff;
-	padding: 20px 30px;
+	background: #eee;
+	color: #333;
+	height: 150px;
+	padding: 10px;
+}
+
+.box h2 {
+	border-bottom: 1px dashed #333;
+	padding-bottom: 2px;
+	font-size: 20px;
+}
+
+#title{
+	display: inline-block;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 60px;
+	color: #FFFFFFFF;
+	background-color: #E42520FF;
+	padding: 10px 15px;
+	margin:20px auto;
+}
+
+#message-box {
+	height: auto;
+	margin: 30px 0;
+	padding-bottom: 1px;
+}
+
+#messages {
+	background-color: #FFFFFFFF;
+}
+
+#message-form {
+	margin: 10px 0;
+}
+
+#submit-button {
+	float: right;
+}
+
+#message-input {
+	display: inline-block;
+    width: 84%;
+
 }
