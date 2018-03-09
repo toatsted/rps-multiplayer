@@ -22,6 +22,7 @@ $(() => {
 	}
 
 	function startGame(){
+		database.ref("chat/").remove();
 		$("#message-box").removeClass("hide");
 
 		$(".playArea").empty();
@@ -63,11 +64,8 @@ $(() => {
 				break;
 				case "game/":
 					data.forEach((value) => {
-						console.log(value);
-						console.log(Player.name);
 						if(!(value === Player.name)){
 							Opponent.name = value;
-							console.log(value);
 						}
 					})
 				break;
@@ -75,6 +73,7 @@ $(() => {
 					$("#messages").empty();
 					data.forEach((value) => {
 						$("#messages").prepend(value);
+						console.log(value);
 					})
 
 					$("#message-form").off("submit").on("submit", function(e){
@@ -83,8 +82,11 @@ $(() => {
 						let message = $("#message-input").val().trim();
 						$("#message-input").val("");
 
-						pTag = "<p><span class='redText'>" + Player.name + ": </span>" + message + "</p>";
-
+						let playerName = $("<span>").text(Player.name);
+						let pTag = $("<p>").text(": " + message).prepend(playerName);
+						// pTag = "<p><span>" + Player.name + ": </span>" + message + "</p>";
+						
+						$("#messages").prepend(pTag);
 						data.push(pTag);
 						database.ref("chat/").set(data);
 					})
