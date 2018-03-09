@@ -8,50 +8,34 @@ $("#killSwitch").on("click", function(){
 })
 
 
-
-
 $(() => {
 	let title = $("#title");
 
+	let pTag;
+
 	let Player = {
-		name: steve
+		name: ""
+	}
+
+	let Opponent = {
+		name: ""
 	}
 
 	function startGame(){
-		referanceHandler("game/");
-		$("#message-box").removeClass("temp");
-		// $(".area").empty();
+		$("#message-box").removeClass("hide");
 
-		// let row = $("<div>").addClass("row");
-		// let col = $("<div>").addClass("col-12");
-		// let box = $("<div>").addClass("box").attr("id", "message-box")
-		// 	.append($("<h2>").text("message"));
-		// let area = $("<div>").addClass("area");
-		// let form = $("<form>").attr("id", "message-form");
-		// let input = $("<input>").attr("autocomplete", "off")
-		// 	.attr("type", "text").attr("id", "message-input");
-		// let button = $("<button>").attr("id", "submit-button")
-		// 	.attr("type", "submit").text("send");
-		// let messages = $("<div>").attr("id", "messages");
-
-		// form.append(input);
-		// form.append(button);
-		// area.append(form);
-		// area.append(messages);
-		// box.append(area);
-		// col.append(box);
-		// row.append(col);
-
-		// $(".container").append(row);
-
-
-
+		$(".playArea").empty();
+		$("#title").text("Supreme");
+		
+		$("#playerName").text(Player.name);
+		$("#opponentName").text(Opponent.name);
 	}
 
 	function referanceHandler(key) {
 		database.ref(key).on("value", function(snapshot) {
 			let data = snapshot.val();
 
+			
 			if(!data){
 				data = [];
 			}
@@ -70,6 +54,7 @@ $(() => {
 
 						let input = $("#name-input").val().trim();
 						$("#name-input").val("");
+						Player.name = input;
 
 						data.push(input);
 						database.ref("queue/").set(data);
@@ -77,7 +62,14 @@ $(() => {
 					})
 				break;
 				case "game/":
-
+					data.forEach((value) => {
+						console.log(value);
+						console.log(Player.name);
+						if(!(value === Player.name)){
+							Opponent.name = value;
+							console.log(value);
+						}
+					})
 				break;
 				case "chat/":
 					$("#messages").empty();
@@ -91,7 +83,7 @@ $(() => {
 						let message = $("#message-input").val().trim();
 						$("#message-input").val("");
 
-						let pTag = "<p><span class='redText'>" + Player.name + ": </span>" + message + "</p>";
+						pTag = "<p><span class='redText'>" + Player.name + ": </span>" + message + "</p>";
 
 						data.push(pTag);
 						database.ref("chat/").set(data);
@@ -105,4 +97,5 @@ $(() => {
 	}
 	referanceHandler("chat/");
 	referanceHandler("queue/");
+	referanceHandler("game/");
 });
