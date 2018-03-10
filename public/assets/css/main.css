@@ -8,6 +8,7 @@ body {
 
 #messages p {
 	margin: 0 5px;
+	border-top: 1px dashed #333;
 }
 
 .redText {
