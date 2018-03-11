@@ -73,3 +73,45 @@
 [info] +  hosting: Local server: http://localhost:5000
 
 [info] Shutting down...
+[debug] [2018-03-11T03:17:35.942Z] ----------------------------------------------------------------------
+[debug] [2018-03-11T03:17:35.949Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sam\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-03-11T03:17:35.949Z] CLI Version:   3.17.5
+[debug] [2018-03-11T03:17:35.950Z] Platform:      win32
+[debug] [2018-03-11T03:17:35.950Z] Node Version:  v8.9.3
+[debug] [2018-03-11T03:17:35.952Z] Time:          Sat Mar 10 2018 21:17:35 GMT-0600 (Central Standard Time)
+[debug] [2018-03-11T03:17:35.953Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-11T03:17:35.993Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-11T03:17:35.996Z] > authorizing via signed-in user
+[debug] [2018-03-11T03:17:36.002Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-11T03:17:36.003Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/zarbszTgRWBNuuXKRMIqu1DsSVXaU8FttQR6Il9D8r8',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Mar 10 2018 21:17:36 GMT-0600 (Central Standard Time)
+[debug] [2018-03-11T03:17:36.411Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-11T03:17:36.498Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/rps-multiplayer-14455  
+  
+ Sat Mar 10 2018 21:17:36 GMT-0600 (Central Standard Time)
+[debug] [2018-03-11T03:17:36.920Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-11T03:17:36.921Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/rps-multiplayer-14455/tokens  
+  
+ Sat Mar 10 2018 21:17:36 GMT-0600 (Central Standard Time)
+[debug] [2018-03-11T03:17:37.398Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-11T03:17:37.401Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/rps-multiplayer-14455  
+  
+ Sat Mar 10 2018 21:17:37 GMT-0600 (Central Standard Time)
+[debug] [2018-03-11T03:17:38.019Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Sam\code\github-repositories\rps-multiplayer'...
+[info] 
+[debug] [2018-03-11T03:17:38.030Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/862761191650/clients/_:getWebAppConfig  
+  
+ Sat Mar 10 2018 21:17:38 GMT-0600 (Central Standard Time)
+[debug] [2018-03-11T03:17:38.629Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
