@@ -1,25 +1,27 @@
 let database = firebase.database();
 
 
-$("#killSwitch").on("click", function() {
-	database.remove();
+$("#kill-switch").on("click", function() {
+	database.ref("queue/").remove();
+	database.ref("chat/").remove();
+	database.ref("game/").remove();
 })
 
 
 $(() => {
-	let title = $("#title");
-	let Player = { name: "" }
-	let Opponent = { name: "" }
+	let title = $(".title");
+	let Player = { name: "", choice: "" }
+	let Opponent = { name: "", chioce: "" }
 
 	function startGame() {
 		database.ref("chat/").remove();
 		$("#message-box").removeClass("hide");
 
-		$(".playArea").empty();
-		$("#title").text("Supreme");
+		$(".play-area").empty();
+		$(".title").text("Rock, Paper, Scissors");
 
-		$("#playerName").text(Player.name);
-		$("#opponentName").text(Opponent.name);
+		$("#player-name").text(Player.name);
+		$("#opponent-name").text(Opponent.name);
 	}
 
 	function referanceHandler(key) {
@@ -43,18 +45,20 @@ $(() => {
 					$("#name-form").off("submit").on("submit", function(e) {
 						e.preventDefault();
 
-						let input = $("#name-input").val().trim();
-						$("#name-input").val("");
-						Player.name = input;
+						if($("#name-input").val().trim()){
+							let input = $("#name-input").val().trim();
+							$("#name-input").val("");
+							Player.name = input;
 
-						data.push(input);
-						database.ref("queue/").set(data);
+							data.push(input);
+							database.ref("queue/").set(data);
+						}
 					})
 					break;
 				case "game/":
 					data.forEach((value) => {
 						if (!(value === Player.name)) {
-							Opponent.name = value;
+							Opponent.name = value.name;
 						}
 					})
 					break;
